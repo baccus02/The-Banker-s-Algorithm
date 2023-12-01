@@ -1,0 +1,28 @@
+Banker's Algorithm Project Documentation
+Introduction:
+
+This project implements the Banker's Algorithm in C++. The program is designed to determine if a set of processes and resources is in a safe state, avoiding deadlocks, and to find a safe sequence for process execution.
+
+
+1. Compile the program using the command:
+   g++ -o bankers_algorithm bankers_algorithm.cpp
+
+2. Run the program with:
+   ./bankers_algorithm
+
+Input File Format:
+
+The input.txt file should be formatted as follows:
+- First line: Number of processes.
+- Second line: Number of resources.
+- Next lines: Allocation matrix, one row per process.
+- Following lines: Maximum demand matrix, one row per process.
+- Last line: Number of available instances of each resource.
+
+Algorithm Explanation:
+
+The Banker's Algorithm is used for deadlock avoidance. It tests if the system can allocate all resources to each process without running into a deadlock. The algorithm simulates resource allocation and checks for a safe sequence where all processes can complete without any of them getting stuck.
+
+Output Interpretation:
+
+The program's output will indicate whether the system is in a safe state. If it is, the program will also display a 'safe sequence'. This sequence is the order in which processes can run without causing a deadlock. If no safe sequence is found, it means the system is not in a safe state.
